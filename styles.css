@@ -1,6 +1,6 @@
 .Calculator_root{
     width: 275px;
-    height: 500px;
+    height: 460px;
     display: flex;
     flex-direction: column;
     background-color: teal;
@@ -16,6 +16,10 @@
 .Calculator_row.margin{
     margin: 10px;
 }
+.Calculator_row.margin-bottom-20{
+    margin-bottom: 20px;
+}
+
 .Calculator_row.gap{
     gap: 5px;
 }
@@ -33,20 +37,21 @@
     height: 60px;
     width: 60px;
     border-radius: 5px;
-    background-color: blue;
-    opacity: 20%;
+    background-color: rgb(85,107,47);
+    display: flex;
+    align-items: center;
 }
 
-/* .Calculator_buttons{
-    display: flex;
-    flex-direction: column;
-    flex: 1
-} */
+.Calculator_text{
+    color: black;
+    flex: 1;
+    text-align: center;
+    font-size: 26px;
+}
 
 .Calculator_screen{
     width: 250px;
     height: 100px;
-    background-color: peachpuff;
-    opacity: 20%;
+    background-color: rgb(85,107,47);
     border-radius: 5px;
 }
