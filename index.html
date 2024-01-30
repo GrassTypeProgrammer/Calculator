@@ -13,12 +13,12 @@
 <body>
     <div class="Calculator_root">
         <div class="Calculator_row margin margin-bottom-20">
-            <div class="Calculator_screen"></div>
+            <div class="Calculator_screen" id="screen"></div>
         </div>
         
         <div class="Calculator_column gap" id="Buttons">
             <div class="Calculator_row gap">
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addSymbol('C')">
                     <div class="Calculator_text">C</div>
                 </button>
                 <button class="Calculator_button">
@@ -27,67 +27,67 @@
                 <button class="Calculator_button">
                     <div class="Calculator_text">?</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addSymbol('+')">
                     <div class="Calculator_text">+</div>
                 </button>
             </div>
 
             <div class="Calculator_row gap">
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(7)">
                     <div class="Calculator_text">7</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(8)">
                     <div class="Calculator_text">8</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(9)">
                     <div class="Calculator_text">9</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addSymbol('-')">
                     <div class="Calculator_text">-</div>
                 </button>
             </div>
 
             <div class="Calculator_row gap">
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(4)">
                     <div class="Calculator_text">4</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(5)">
                     <div class="Calculator_text">5</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(6)">
                     <div class="Calculator_text">6</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addSymbol('*')">
                     <div class="Calculator_text">x</div>
                 </button>
             </div>
 
             <div class="Calculator_row gap">
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(1)">
                     <div class="Calculator_text">1</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(2)">
                     <div class="Calculator_text">2</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(3)">
                     <div class="Calculator_text">3</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addSymbol('/')">
                     <div class="Calculator_text">/</div>
                 </button>
             </div>
 
             <div class="Calculator_row gap">
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addSymbol('.')">
                     <div class="Calculator_text">.</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="addNumber(0)">
                     <div class="Calculator_text">0</div>
                 </button>
                 <button class="Calculator_button">
                     <div class="Calculator_text">?</div>
                 </button>
-                <button class="Calculator_button">
+                <button class="Calculator_button" onmousedown="solveEquation()">
                     <div class="Calculator_text">=</div>
                 </button>
             </div>
