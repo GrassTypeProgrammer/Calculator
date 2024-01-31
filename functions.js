@@ -113,7 +113,7 @@ function addNewValueToScreen(value, isSymbol = false){
     else{
         _screenDisplay += value + '';
     }
-    
+
     updateScreenDisplay();
 }
 
@@ -142,6 +142,30 @@ function clearScreen(){
 
 
 function backspace(){
+    if(_screenDisplay.length == 0){
+        return;
+    }
+
+    if(_currentSymbols.length == _currentNumbers.length){
+        _currentSymbols.pop();
+        _screenDisplay = _screenDisplay.substring(0, _screenDisplay.length -3)
+    }
+    else{
+        const currentNumber = _currentNumbers[_currentNumbers.length-1];
+        if(currentNumber.length > 1){
+            _currentNumbers[_currentNumbers.length-1] = currentNumber.substring(0, currentNumber.length - 1);
+            _screenDisplay = _screenDisplay.substring(0, _screenDisplay.length -1);
+        }
+        else{
+            _currentNumbers.pop();
+            _screenDisplay = _screenDisplay.substring(0, _screenDisplay.length > 1? 
+                _screenDisplay.length - 1
+                :
+                _screenDisplay.length - 2)
+        }
+    }
+
+    updateScreenDisplay();
     // needs to remove from screen and current symbol/num
 }
 

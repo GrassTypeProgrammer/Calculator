@@ -1,6 +1,11 @@
 
 
-1) screen css needs work.
-2) backspace.
+1) Done. screen css needs work.
+2) Done. backspace.
 3) pressing equals twice will cause undefined to show.
 4) float values don't currently work.
+5) staring with a symbol causes an error. The only symbol you should be able to start with is a -
+6) Prevent divide by 0.
+7) Make unused buttons disabled.
+8) New color scheme.
+9) finished.
