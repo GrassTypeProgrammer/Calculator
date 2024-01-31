@@ -113,6 +113,7 @@ function addNewValueToScreen(value, isSymbol = false){
     else{
         _screenDisplay += value + '';
     }
+    
     updateScreenDisplay();
 }
 

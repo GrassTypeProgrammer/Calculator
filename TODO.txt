@@ -1,15 +1,6 @@
 
 
-1) Work out how this is going to work. You press a button, which send in either a number or a symbol. 
-    - If number, keep putting them at the end of the current number. You could store them as a string and convert when ready.
-    - if symbol, store it and start a new number.
-    - when equals is pressed, perform the operation with both numbers (obviously, error handling will be needed, but 
-        assume 2 numbers first?).
-
-Stretch goal would be allowing more than two numbers. Maybe just for the same equations type? i.e, multiple + and -?
-    if you use an array to hold it all, I don't think it would be too hard to do with */+-.
-
-    [2, 3, 4, 5]
-    [+, *, -]
-    go through the second array, searching for the * and / first, work out the corresponding numbers, shrink both arrays, 
-        carry on.
+1) screen css needs work.
+2) backspace.
+3) pressing equals twice will cause undefined to show.
+4) float values don't currently work.

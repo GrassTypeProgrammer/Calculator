@@ -54,4 +54,17 @@
     height: 100px;
     background-color: rgb(85,107,47);
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow: hidden;
+    
+}
+
+.Calculator_screenText{
+    font-size: 46px;
+    text-align: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-wrap: nowrap;
 }
