@@ -45,49 +45,56 @@ function addNumber(num){
 
 
 function solveEquation(){
-        for (let index = 0; index < _currentSymbols.length; index++) {
-            const symbol = _currentSymbols[index];
-            let ans;
-
-            if(symbol == '*' || symbol == '/'){
-                if(symbol == '*' ){
-                    ans = parseFloat(_currentNumbers[index]) * parseFloat(_currentNumbers[index + 1]);
-                }
-                else if(symbol == '/'){
-                    ans = parseFloat(_currentNumbers[index] )/ parseFloat(_currentNumbers[index + 1]);
-                }
-                
-                _currentNumbers[index] = ans.toString();
-                _currentNumbers.splice(index + 1, 1);
-                _currentSymbols.splice(index, 1);
-                index--;
-            }
-        }
-
-        for (let index = 0; index < _currentSymbols.length; index++) {
-            const symbol = _currentSymbols[index];
-            let ans;
-
-            if(symbol == '+' || symbol == '-'){
-                if(symbol == '+' ){
-                    ans = parseFloat(_currentNumbers[index]) + parseFloat(_currentNumbers[index + 1]);
-                }
-                else if(symbol == '-'){
-                    ans = parseFloat(_currentNumbers[index]) - parseFloat(_currentNumbers[index + 1]);
-                }
-                
-                _currentNumbers[index] = ans.toString();
-                _currentNumbers.splice(index + 1, 1);
-                _currentSymbols.splice(index, 1);
-                index--;
-            }
-        }
-
-        ans = _currentNumbers[0];
-        clearAll();
-        addNewValueToScreen(ans);
-        _showingAnswer = true;
+    if(_currentNumbers.length < 2){
+        return;
     }
+    else if(_currentNumbers.length == _currentSymbols.length){
+        _currentSymbols.pop();
+    }
+
+    for (let index = 0; index < _currentSymbols.length; index++) {
+        const symbol = _currentSymbols[index];
+        let ans;
+
+        if(symbol == '*' || symbol == '/'){
+            if(symbol == '*' ){
+                ans = parseFloat(_currentNumbers[index]) * parseFloat(_currentNumbers[index + 1]);
+            }
+            else if(symbol == '/'){
+                ans = parseFloat(_currentNumbers[index] )/ parseFloat(_currentNumbers[index + 1]);
+            }
+            
+            _currentNumbers[index] = ans.toString();
+            _currentNumbers.splice(index + 1, 1);
+            _currentSymbols.splice(index, 1);
+            index--;
+        }
+    }
+
+    for (let index = 0; index < _currentSymbols.length; index++) {
+        const symbol = _currentSymbols[index];
+        let ans;
+
+        if(symbol == '+' || symbol == '-'){
+            if(symbol == '+' ){
+                ans = parseFloat(_currentNumbers[index]) + parseFloat(_currentNumbers[index + 1]);
+            }
+            else if(symbol == '-'){
+                ans = parseFloat(_currentNumbers[index]) - parseFloat(_currentNumbers[index + 1]);
+            }
+            
+            _currentNumbers[index] = ans.toString();
+            _currentNumbers.splice(index + 1, 1);
+            _currentSymbols.splice(index, 1);
+            index--;
+        }
+    }
+
+    ans = _currentNumbers[0];
+    clearAll();
+    addNewValueToScreen(ans);
+    _showingAnswer = true;
+}
 
 function printArray(array){
     console.log('Array: ');
