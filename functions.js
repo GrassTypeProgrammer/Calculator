@@ -4,12 +4,29 @@ _currentNumbers = [];
 _symbols = ['+', '-', '*', '/'];
 _screenDisplay = '';
 _showingAnswer = false;
+_nextValueMustBeNum = false;
 
 
 function addSymbol(symbol){
+    if(_nextValueMustBeNum){
+        return;
+    }
+
     if(_showingAnswer){
         _showingAnswer = false;
         clearAll();
+    }
+    
+    if(_currentNumbers.length == _currentSymbols.length)
+    {
+        if(symbol == '-'){
+            addNumber(symbol);
+            _nextValueMustBeNum = true;
+            return;
+        }
+        else{
+            return;
+        }
     }
 
     if(_symbols.includes(symbol)){
@@ -20,7 +37,7 @@ function addSymbol(symbol){
         else{
             _currentSymbols.push(symbol);
             addNewValueToScreen(symbol, true);
-    }
+        }
     }
 
 }
@@ -41,16 +58,27 @@ function addNumber(num){
         _currentNumbers[_currentNumbers.length - 1] += (num + '');
         addToExistingValueOnScreen(num);
     }
+
+    if(_nextValueMustBeNum){
+        _nextValueMustBeNum = false;
+    }
 }
 
 
 function solveEquation(){
+    if(_currentNumbers[_currentNumbers.length-1] == '-'){
+        _currentNumbers.pop();
+        backspace();
+    }
+
     if(_currentNumbers.length < 2){
         return;
     }
-    else if(_currentNumbers.length == _currentSymbols.length){
+    else if(_currentNumbers.length == _currentSymbols.length){      
         _currentSymbols.pop();
     }
+
+
 
     for (let index = 0; index < _currentSymbols.length; index++) {
         const symbol = _currentSymbols[index];
@@ -172,8 +200,11 @@ function backspace(){
         }
     }
 
+    if(_nextValueMustBeNum){
+        _nextValueMustBeNum = false;
+    }
+
     updateScreenDisplay();
-    // needs to remove from screen and current symbol/num
 }
 
 //#endregion
