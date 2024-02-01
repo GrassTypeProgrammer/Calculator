@@ -64,6 +64,16 @@ function addNumber(num){
     }
 }
 
+function addFloatingPoint(){
+    if(_currentNumbers.length == _currentSymbols.length || _currentNumbers[_currentNumbers.length - 1] == '-'){
+        addNumber('0.');
+    }
+    else{
+        if(!_currentNumbers[_currentNumbers.length - 1].includes('.')){
+            addNumber('.');
+        }
+    }
+}
 
 function solveEquation(){
     if(_currentNumbers[_currentNumbers.length-1] == '-'){

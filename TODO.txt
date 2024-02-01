@@ -3,9 +3,13 @@
 1) Done. screen css needs work.
 2) Done. backspace.
 3) Done. pressing equals twice will cause undefined to show.
-4) float values don't currently work. (will need backspace adjustment)
+4) Done. float values don't currently work. (will need backspace adjustment)
 5) Done. staring with a symbol causes an error. The only symbol you should be able to start with is a - (will need backspace adjustment)
 6) Prevent divide by 0/ handle it gracefully.
 7) Make unused buttons disabled.
 8) New color scheme.
+9) Screen update:
+    needs padding on right.
+    make input start from left so that it truncates the decimal. Ie; currently, if you have 2.9999999999, the 2.9 get cut off
+        from the left and you see 99999999, which appears to be an error.
 9) finished.
