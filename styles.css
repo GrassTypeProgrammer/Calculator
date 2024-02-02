@@ -42,6 +42,20 @@
     align-items: center;
 }
 
+.Calculator_button:disabled:hover{
+    background-color: rgb(85,107,47);
+}
+
+.Calculator_button:hover{
+    transition: 0.3s;
+    background-color: rgb(120,132,71);
+}
+
+.Calculator_button:active{
+    background-color: rgb(65,87,27);
+    transition: 0.1s;
+}
+
 .Calculator_text{
     color: black;
     flex: 1;
