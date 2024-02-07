@@ -7,8 +7,8 @@
 5) Done. staring with a symbol causes an error. The only symbol you should be able to start with is a - (will need backspace adjustment)
 6) JS handles it for me. Prevent divide by 0/ handle it gracefully.
 7) Done. Make unused buttons disabled.
-8) New color scheme.
-9) Screen update:
+8) Done. New color scheme.
+9) Done. Screen update:
     needs padding on right.
     make input start from left so that it truncates the decimal. Ie; currently, if you have 2.9999999999, the 2.9 get cut off
         from the left and you see 99999999, which appears to be an error.
